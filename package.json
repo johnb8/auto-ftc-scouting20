@@ -1,0 +1,26 @@
+{
+  "name": "auto-ftc-scouting20",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/johnb8/auto-ftc-scouting20.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnb8/auto-ftc-scouting20/issues"
+  },
+  "homepage": "https://github.com/johnb8/auto-ftc-scouting20#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nano": "^8.1.0",
+    "pug": "^2.0.4"
+  }
+}
