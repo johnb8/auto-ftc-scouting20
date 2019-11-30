@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const scouty = require('./scouty');
+
 app.set('view engine', 'pug');
 
 const addView = (path, view, dataFunction) => {
@@ -11,7 +13,11 @@ const addView = (path, view, dataFunction) => {
 };
 
 addView('/', 'index', async (req) => {
-    return {test: 'test message 1'}
+    return{databases: await scouty.getDatabases()};
+});
+
+addView('/event/:db', 'event', async (req) => {
+    return{data: await scouty.getData(req.params.db)};
 });
 
 app.listen(4334);
